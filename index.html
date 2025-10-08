@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog de primer parcial</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Blog de primer parcial</title>
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="style.css">
+</head><link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 <body>
-  
-  <!-- Contenido del blog -->
-  <div id="contenido" style="display:none;">
+
     <header>
-      <h1>Blog de primer parcial</h1>
+        <h1>Blog de primer parcial</h1>
+        <h2>Bienvenidos a mi página web de primer parcial para la clase de Programacion Web.</h2>
     </header>
 
     <main>
-      <article>
-        <h2>Bienvenidos</h2>
-        <p>Este es un blog demostrativo para el primer parcial de la clase de Programación Web.</p>
-      </article>
+        <form id="formulario">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo">
 
-      <section class="comment-form">
-        <h3>Agregar un comentario</h3>
-        <input type="text" id="nombre" placeholder="Tu nombre" required>
-        <textarea id="mensaje" rows="3" placeholder="Escribe tu comentario" required></textarea>
-        <input type="file" id="imagen" accept="image/*">
-        <img id="preview" src="" alt="Vista previa" style="display:none; max-width:200px; margin-top:10px; border-radius:5px;"/>
-        <button onclick="agregarComentario()">Publicar comentario</button>
-        <button onclick="borrarComentarios()" class="btn-delete">Borrar todos los comentarios</button>
-      </section>
+            <label for="comentario">Agregar un comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
 
-      <section id="comentarios">
-        <h3>Comentarios</h3>
-      </section>
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo">
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Aquí se mostrarán los resultados cuando se envíe el formulario -->
+        <div id="resultado"></div>
     </main>
-  </div>
 
-  <script src="js/script.js"></script>
+    <footer>
+        <p>&copy; Blog de primer parcial</p>
+    </footer>
+
+    <!-- Enlace al JS -->
+    <script src="script.js"></script>
 </body>
 </html>
