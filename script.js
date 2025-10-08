@@ -2,7 +2,6 @@
 window.onload = function() {
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
   comentariosGuardados.forEach(c => mostrarComentario(c));
-}
 
 // Vista previa de imagen
 document.getElementById('imagen').addEventListener('change', function() {
