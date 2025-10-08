@@ -1,3 +1,4 @@
+}
 // --- Comentarios ---
 window.onload = function() {
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
