@@ -1,4 +1,3 @@
-
 let pass = prompt("Enter password to continue");
 const passwordCorrecta = "081000";
 
