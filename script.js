@@ -5,7 +5,7 @@ window.onload = function() {
 }
 
 let pass = prompt("Introduce la contraseña para acceder al blog:");
-const passwordCorrecta = "0810";
+const passwordCorrecta = 0810;
 
 if (pass !== passwordCorrecta) {
     document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
