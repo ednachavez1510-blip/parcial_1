@@ -4,11 +4,11 @@ window.onload = function() {
   comentariosGuardados.forEach(c => mostrarComentario(c));
 }
 
-let pass = prompt("Introduce la contraseña para acceder al blog:");
-const passwordCorrecta = 0810;
+let pass = prompt("Enter password to continue");
+const passwordCorrecta = "081000";
 
 if (pass !== passwordCorrecta) {
-    document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+    document.body.innerHTML = "<h1>Access denied ❌</h1>";
 } else {
     // Solo si la contraseña es correcta, carga los comentarios guardados
     window.onload = function() {
