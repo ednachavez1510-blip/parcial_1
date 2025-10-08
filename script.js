@@ -1,16 +1,3 @@
-}
-let pass = prompt("Enter password to continue");
-const passwordCorrecta = "081000";
-
-if (pass !== passwordCorrecta) {
-    document.body.innerHTML = "<h1>Access denied ❌</h1>";
-} else {
-    // Solo si la contraseña es correcta, carga los comentarios guardados
-    window.onload = function() {
-        const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
-        comentariosGuardados.forEach(c => mostrarComentario(c));
-    }
-
 // --- Comentarios ---
 window.onload = function() {
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
