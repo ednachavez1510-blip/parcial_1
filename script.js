@@ -3,6 +3,19 @@ window.onload = function() {
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
   comentariosGuardados.forEach(c => mostrarComentario(c));
 }
+
+let pass = prompt("Introduce la contraseña para acceder al blog:");
+const passwordCorrecta = "0810";
+
+if (pass !== passwordCorrecta) {
+    document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+} else {
+    // Solo si la contraseña es correcta, carga los comentarios guardados
+    window.onload = function() {
+        const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentariosGuardados.forEach(c => mostrarComentario(c));
+    }
+  
 // Vista previa de imagen
 document.getElementById('imagen').addEventListener('change', function() {
   const preview = document.getElementById('preview');
